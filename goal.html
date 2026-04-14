@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>目标计划 · 咕咕财务陪伴</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site-shell" id="goalPage">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" data-gugu-avatar></div>
+        <div class="brand-copy">
+          <strong>目标计划</strong>
+          <span>把未来拆成几条能慢慢照看的长期线，而不是只盯着一个大数字。</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="advisor.html">风险与计划</a>
+        <a href="goal.html">目标</a>
+        <a href="manifest.html">显化</a>
+        <a href="manifest.html" class="nav-cta">去显化</a>
+      </nav>
+    </header>
+
+    <main class="page-body">
+      <section class="spread" id="goal-cover">
+        <div class="spread-header">
+          <div>
+            <div class="eyebrow">goal pages</div>
+            <h1 style="margin:16px 0 0;font-size:clamp(40px,5.2vw,74px);line-height:1.02;letter-spacing:-.05em">目标不是一张结果单。<br>更像一本慢慢更新的计划册。</h1>
+            <p style="margin-top:16px;max-width:680px;font-size:17px">你可以同时照看几条长期线：旅行、读研、独居准备、退休。这里会把它们放进同一本册子里，让你知道现在在看哪一个，又走到了哪里。</p>
+          </div>
+          <div class="quote-banner" style="max-width:430px">
+            <div class="avatar-badge" data-gugu-avatar></div>
+            <div>
+              <q id="goalQuoteText">今天的克制，不是亏待自己，是在替更远的愿望腾地方。</q>
+              <span id="goalQuoteDate">今日</span>
+            </div>
+          </div>
+        </div>
+        <div class="spread-jump">
+          <a class="turn-link" href="#goal-plans">
+            <span class="page-no">01</span>
+            <span class="copy"><small>next spread</small><span>翻到计划</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="spread" id="goal-plans">
+        <div class="two-panel">
+          <aside class="sticky-side">
+            <div class="section" style="margin-top:0;padding-bottom:26px">
+              <div class="section-head">
+                <div>
+                  <h2>我的计划</h2>
+                  <p>同时照看最多三条目标线。</p>
+                </div>
+                <span class="mini-tag" id="planCount">进行中 0 / 3</span>
+              </div>
+              <div class="btn-row" style="margin-top:0;margin-bottom:16px">
+                <button class="btn-primary" id="newPlanBtn" type="button">新建计划</button>
+              </div>
+              <div class="plan-list" id="planList"></div>
+            </div>
+          </aside>
+
+          <div>
+            <section class="section" id="goal-progress" style="margin-top:0;padding-bottom:28px">
+              <div class="section-head">
+                <div>
+                  <h2>当前进度</h2>
+                  <p>这里始终只看当前这一条目标线。</p>
+                </div>
+              </div>
+              <div id="goalDetail"></div>
+              <div class="spread-jump">
+                <a class="turn-link" href="#goal-milestones">
+                  <span class="page-no">02</span>
+                  <span class="copy"><small>next spread</small><span>翻到里程碑</span></span>
+                  <span class="arrow">→</span>
+                </a>
+              </div>
+            </section>
+
+            <section class="section" id="goal-milestones" style="padding-bottom:28px">
+              <div class="section-head">
+                <div>
+                  <h2>里程碑</h2>
+                  <p>把漫长的事拆成几个更容易被看见的阶段。</p>
+                </div>
+              </div>
+              <div class="milestone-list" id="milestoneList"></div>
+              <div class="spread-jump">
+                <a class="turn-link" href="#goal-archive">
+                  <span class="page-no">03</span>
+                  <span class="copy"><small>next spread</small><span>翻到归档</span></span>
+                  <span class="arrow">→</span>
+                </a>
+              </div>
+            </section>
+
+            <section class="section" id="goal-archive" style="padding-bottom:28px">
+              <div class="archive-header">
+                <div>
+                  <h2 style="margin:0">归档</h2>
+                  <p style="margin:8px 0 0;color:#6d6458">完成和暂时放下的计划都留在这里。</p>
+                </div>
+                <div class="btn-row" style="margin:0">
+                  <span class="mini-tag" id="archiveCount">0 条</span>
+                  <button class="btn-secondary" id="archiveToggle" type="button">展开 / 收起</button>
+                  <a class="turn-link" href="manifest.html" style="position:static;margin-left:4px">
+                    <span class="page-no">04</span>
+                    <span class="copy"><small>open page</small><span>翻到显化</span></span>
+                    <span class="arrow">→</span>
+                  </a>
+                </div>
+              </div>
+              <div class="archive-wrap collapsed" id="archiveWrap" style="margin-top:16px">
+                <div class="archive-list" id="archiveList"></div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>这一页更像计划册，而不是一张只讲数字的结果页。</span>
+      <a href="manifest.html">去显化</a>
+    </footer>
+  </div>
+
+  <script src="site-state.js"></script>
+  <script src="goal-plans.js"></script>
+</body>
+</html>

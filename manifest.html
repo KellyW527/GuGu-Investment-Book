@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>显化页 · 咕咕财务陪伴</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site-shell" id="manifestPage">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" data-gugu-avatar></div>
+        <div class="brand-copy">
+          <strong>显化页</strong>
+          <span>把一句还没完全成形的话，安静地留在这里。</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="advisor.html">风险与计划</a>
+        <a href="goal.html">目标</a>
+        <a href="manifest.html">显化</a>
+        <a href="goal.html" class="nav-cta">回到目标</a>
+      </nav>
+    </header>
+
+    <main class="page-body">
+      <section class="spread" id="manifest-cover">
+        <div class="spread-header">
+          <div>
+            <div class="eyebrow">manifest page</div>
+            <h1 style="margin:16px 0 0;font-size:clamp(40px,5.2vw,74px);line-height:1.02;letter-spacing:-.05em">给念头一个落点。</h1>
+            <p style="margin-top:16px;max-width:560px;font-size:17px">还说不清的期待，也可以先被留下。<br>不用着急完整，<br>先让它有一个位置。</p>
+          </div>
+          <div class="quote-banner" style="max-width:430px">
+            <div class="avatar-badge" data-gugu-avatar></div>
+            <div>
+              <q id="manifestQuoteText">今天也在把远方，悄悄推近一点。</q>
+              <span id="manifestQuoteDate">今日</span>
+            </div>
+          </div>
+        </div>
+        <div class="spread-jump">
+          <a class="turn-link" href="#manifest-stage">
+            <span class="page-no">01</span>
+            <span class="copy"><small>next spread</small><span>翻到场景</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="spread manifest-spread" id="manifest-stage">
+        <div class="manifest-layout manifest-layout-refined">
+          <aside class="manifest-note-column">
+            <div class="spread-header" style="margin-bottom:18px">
+              <div>
+                <div class="eyebrow">left note</div>
+                <h2 class="manifest-stage-title" style="margin:16px 0 0;font-size:clamp(28px,3.5vw,46px);line-height:1.08">留下这一刻的念头</h2>
+                <p style="margin-top:14px;max-width:320px">不需要很确定。<br>只要它此刻真实地停在你心里。</p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="wishInput">这一刻的句子</label>
+              <textarea class="wish-input" id="wishInput" placeholder="写一句你最近最常想到的话……"></textarea>
+            </div>
+
+            <div class="btn-row">
+              <button class="btn-primary" id="manifestSubmit" type="button">留下它</button>
+            </div>
+            <p class="helper-text" id="manifestHint">写下这一刻最常停留的那句话。</p>
+
+            <div class="manifest-side-note">
+              有些念头不是立刻回答，<br>而是先被认真放好。
+            </div>
+
+            <div class="manifest-status-block">
+              <div class="manifest-status-head">
+                <div>
+                  <h3>今日香炉</h3>
+                  <p>点亮一炷，再点亮一炷。<br>让想法从模糊，慢慢变得可见。</p>
+                </div>
+                <span class="mini-tag" id="incenseStatus">0 / 3</span>
+              </div>
+              <p class="helper-text" id="incenseNote">把鼠标放到香上，再轻轻点亮它。</p>
+              <div class="mini-tag" id="incenseComplete" style="margin-top:10px">每炷 +2 星星</div>
+            </div>
+          </aside>
+
+          <section class="manifest-scene-panel">
+            <div class="spread-header" style="margin-bottom:14px">
+              <div>
+                <div class="eyebrow">main scene</div>
+                <h2 class="manifest-stage-title" style="margin:16px 0 0;font-size:clamp(32px,4vw,52px);line-height:1.04">光落下来的地方</h2>
+                <p>有些愿望不是立刻实现，<br>而是先被认真看见。</p>
+              </div>
+            </div>
+            <div class="canvas-wrap canvas-wrap-refined">
+              <canvas id="manifestCanvas" class="manifest-canvas"></canvas>
+              <div class="canvas-overlay"></div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>先承认它重要，再慢慢靠近它。</span>
+      <a href="index.html">回首页</a>
+    </footer>
+  </div>
+
+  <script src="site-state.js"></script>
+  <script src="manifest-canvas.js"></script>
+</body>
+</html>

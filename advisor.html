@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>风险与计划 · 咕咕财务陪伴</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site-shell" id="advisorPage">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" data-gugu-avatar></div>
+        <div class="brand-copy">
+          <strong>风险与计划</strong>
+          <span>像一页页往下读：先看边界，再留现金，再谈配置，最后才是执行。</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="advisor.html">风险与计划</a>
+        <a href="goal.html">目标</a>
+        <a href="manifest.html">显化</a>
+        <a href="goal.html" class="nav-cta">去设目标</a>
+      </nav>
+    </header>
+
+    <main class="page-body">
+      <section class="spread" id="advisor-cover">
+        <div class="spread-header">
+          <div>
+            <div class="eyebrow">editorial flow</div>
+            <h1 style="margin:16px 0 0;font-size:clamp(42px,5.6vw,80px);line-height:1.02;letter-spacing:-.05em">先看风险，<br>再把长期感慢慢搭起来。</h1>
+            <p style="margin-top:16px;max-width:700px;font-size:17px">这一页不是把模型一下子砸给你，而是像一本刊物一样分段往下读。你会先读自己的边界，再读现金，再读配置，最后再看执行规则。</p>
+          </div>
+          <div class="quote-banner" style="max-width:430px">
+            <div class="avatar-badge" data-gugu-avatar></div>
+            <div>
+              <q>先知道什么不能碰，再慢慢决定哪些钱可以走远。</q>
+              <span>—— 咕咕语录</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-strip interactive-wrap">
+          <button class="step-btn active" id="stepRisk" type="button" data-step-btn="risk">1 风险</button>
+          <button class="step-btn" id="stepBucket" type="button" data-step-btn="bucket">2 分桶</button>
+          <button class="step-btn" id="stepAllocation" type="button" data-step-btn="allocation">3 配置</button>
+          <button class="step-btn" id="stepExecute" type="button" data-step-btn="execute">4 执行</button>
+        </div>
+
+        <div class="spread-jump">
+          <a class="turn-link" href="#advisor-risk">
+            <span class="page-no">01</span>
+            <span class="copy"><small>next spread</small><span>翻到风险</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="advisor-step" id="advisor-risk" data-step-panel="risk">
+        <div class="spread-header">
+          <div>
+            <div class="eyebrow">step one</div>
+            <h2 style="margin:16px 0 0">先看风险</h2>
+            <p>先把承受力、现金流和近期支出看清楚。后面的分桶、配置和执行，都会以这里为前提。</p>
+          </div>
+          <div class="mini-tag" id="riskTag">R3 · 稳健平衡</div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <strong>风险测评</strong>
+            <p id="riskQuizHint">先把 8 题做完，结果会更稳。</p>
+            <div class="track" style="margin-top:12px"><span class="fill" id="riskProgressFill" style="width:0%;background:#6f8193"></span></div>
+            <div class="paper-chip" id="riskProgressLabel" style="margin-top:12px">0 / 8</div>
+            <div class="rule-list" id="riskQuiz" style="margin-top:16px">
+              <div class="rule-sheet" data-risk-question="q1"><strong>回撤时怎么做</strong><div class="btn-row"><button class="switch-btn" type="button" data-risk-value="1">先卖出</button><button class="switch-btn" type="button" data-risk-value="2">先观察</button><button class="switch-btn" type="button" data-risk-value="3">继续持有</button><button class="switch-btn" type="button" data-risk-value="4">考虑补仓</button></div></div>
+              <div class="rule-sheet" data-risk-question="q2"><strong>多久会用到钱</strong><div class="btn-row"><button class="switch-btn" type="button" data-risk-value="1">3个月内</button><button class="switch-btn" type="button" data-risk-value="2">1年内</button><button class="switch-btn" type="button" data-risk-value="3">1到3年</button><button class="switch-btn" type="button" data-risk-value="4">3年以上</button></div></div>
+              <div class="rule-sheet" data-risk-question="q3"><strong>更在意什么</strong><div class="btn-row"><button class="switch-btn" type="button" data-risk-value="1">不亏本金</button><button class="switch-btn" type="button" data-risk-value="2">波动小</button><button class="switch-btn" type="button" data-risk-value="3">稳中有增</button><button class="switch-btn" type="button" data-risk-value="4">长期更高</button></div></div>
+              <div class="rule-sheet" data-risk-question="q4"><strong>能接受的回撤</strong><div class="btn-row"><button class="switch-btn" type="button" data-risk-value="1">很低</button><button class="switch-btn" type="button" data-risk-value="2">5%-10%</button><button class="switch-btn" type="button" data-risk-value="3">10%-15%</button><button class="switch-btn" type="button" data-risk-value="4">长期可以</button></div></div>
+              <div class="rule-sheet" data-risk-question="q5"><strong>收入稳定性</strong><div class="btn-row"><button class="switch-btn" type="button" data-risk-value="1">很波动</button><button class="switch-btn" type="button" data-risk-value="2">偶尔兼职</button><button class="switch-btn" type="button" data-risk-value="3">相对稳定</button><button class="switch-btn" type="button" data-risk-value="4">较稳定</button></div></div>
+              <div class="rule-sheet" data-risk-question="q6"><strong>未来大额支出</strong><div class="btn-row"><button class="switch-btn" type="button" data-risk-value="1">很多</button><button class="switch-btn" type="button" data-risk-value="2">有一点</button><button class="switch-btn" type="button" data-risk-value="3">暂时不多</button><button class="switch-btn" type="button" data-risk-value="4">基本没有</button></div></div>
+              <div class="rule-sheet" data-risk-question="q7"><strong>应急金习惯</strong><div class="btn-row"><button class="switch-btn" type="button" data-risk-value="1">几乎不留</button><button class="switch-btn" type="button" data-risk-value="2">留一点</button><button class="switch-btn" type="button" data-risk-value="3">留2到3月</button><button class="switch-btn" type="button" data-risk-value="4">留足3月以上</button></div></div>
+              <div class="rule-sheet" data-risk-question="q8"><strong>对分散理解</strong><div class="btn-row"><button class="switch-btn" type="button" data-risk-value="1">几乎不了解</button><button class="switch-btn" type="button" data-risk-value="2">知道一点</button><button class="switch-btn" type="button" data-risk-value="3">会看仓位</button><button class="switch-btn" type="button" data-risk-value="4">较熟悉</button></div></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <strong>现金流输入</strong>
+            <p>这一页决定后面所有边界，不要跳过。</p>
+            <div class="form-grid" style="margin-top:14px">
+              <div class="field"><label for="advisorMonthlyExpense">每月基本支出</label><input id="advisorMonthlyExpense" type="number" min="0"></div>
+              <div class="field"><label for="advisorLiquidCash">当前现金 / 货基</label><input id="advisorLiquidCash" type="number" min="0"></div>
+              <div class="field"><label for="advisorNearExpense">3个月内支出</label><input id="advisorNearExpense" type="number" min="0"></div>
+              <div class="field"><label for="advisorFutureExpense">12个月内大额支出</label><input id="advisorFutureExpense" type="number" min="0"></div>
+              <div class="field"><label for="advisorInvestableCash">当前可投资金额</label><input id="advisorInvestableCash" type="number" min="0"></div>
+              <div class="field"><label for="advisorHorizon">计划投资期限</label><select id="advisorHorizon"><option value="1">1年以内</option><option value="3">1-3年</option><option value="5" selected>3-5年</option><option value="8">5年以上</option></select></div>
+              <div class="field"><label for="advisorIncomeStability">收入稳定性</label><select id="advisorIncomeStability"><option value="1">主要靠生活费</option><option value="2">偶尔兼职</option><option value="3" selected>有固定兼职/奖学金</option><option value="4">较稳定</option></select></div>
+              <div class="field"><label for="advisorExperience">投资经验</label><select id="advisorExperience"><option value="1">几乎没有</option><option value="2" selected>刚开始</option><option value="3">有1年以上经验</option><option value="4">较熟悉组合</option></select></div>
+              <div class="field full"><label for="advisorMaxLoss">最大可承受亏损</label><select id="advisorMaxLoss"><option value="5">5%以内</option><option value="8">8%以内</option><option value="12" selected>12%以内</option><option value="18">18%以内</option><option value="25">25%以内</option></select></div>
+            </div>
+            <div class="btn-row">
+              <button class="btn-primary" type="button" id="generatePlanBtn">生成结果</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="metric-grid">
+          <div class="metric-card">
+            <div class="kicker"><small>风险条</small><span class="value-note" id="riskBarLabel">题目和现金流一起算</span></div>
+            <div class="paper-scale" id="riskBars"></div>
+          </div>
+          <div class="metric-card">
+            <div class="kicker"><small>当前阶段</small><span class="value-note">现在该先做什么</span></div>
+            <div class="stage-glyph">
+              <div class="stage-ruler">
+                <span class="dot dot-a" data-stage-dot="cash"></span>
+                <span class="dot dot-b" data-stage-dot="steady"></span>
+                <span class="dot dot-c" data-stage-dot="growth"></span>
+                <span class="dot dot-d" data-stage-dot="extra"></span>
+              </div>
+              <div class="stage-labels">
+                <strong id="riskPhase">稳健积累期</strong>
+                <span id="riskPhaseReason">先兼顾未来支出。</span>
+              </div>
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="kicker"><small>综合分数</small><span class="value-note" id="riskScoreHint">主观 50 · 客观 63</span></div>
+            <div class="score-gauge" id="riskScoreGauge">
+              <div class="score-ring" style="--score:58"></div>
+              <div class="score-content"><strong id="riskScore">58</strong><span>score</span></div>
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="kicker"><small>最大回撤</small><span class="value-note" id="riskEmergency">3.8个月</span></div>
+            <div class="drawdown-scale">
+              <div class="drawdown-axis"></div>
+              <div class="drawdown-tick" style="left:14%"><span>-5%</span></div>
+              <div class="drawdown-tick" style="left:34%"><span>-10%</span></div>
+              <div class="drawdown-tick" style="left:54%"><span>-15%</span></div>
+              <div class="drawdown-tick" style="left:74%"><span>-20%</span></div>
+              <div class="drawdown-tick" style="left:92%"><span>-25%</span></div>
+              <div class="drawdown-flag" id="riskDrawdown" style="left:36%">-10.8%</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="spread-jump">
+          <a class="turn-link" href="#advisor-bucket" data-next-step="bucket">
+            <span class="page-no">02</span>
+            <span class="copy"><small>next spread</small><span>翻到分桶</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="advisor-step locked" id="advisor-bucket" data-step-panel="bucket">
+        <div class="spread-header">
+          <div>
+            <div class="eyebrow">step two</div>
+            <h2 style="margin:16px 0 0">再分现金</h2>
+            <p>分桶不是为了复杂，而是先把该留在身边的钱留下来。</p>
+          </div>
+          <div class="small-note">生活桶 / 稳定桶 / 增长桶</div>
+        </div>
+        <div class="bucket-list" id="bucketList"></div>
+        <div class="spread-jump">
+          <a class="turn-link" href="#advisor-allocation" data-next-step="allocation">
+            <span class="page-no">03</span>
+            <span class="copy"><small>next spread</small><span>翻到配置</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="advisor-step locked" id="advisor-allocation" data-step-panel="allocation">
+        <div class="spread-header">
+          <div>
+            <div class="eyebrow">step three</div>
+            <h2 style="margin:16px 0 0">股债现配置</h2>
+            <p>这里先只给结果，不把解释做得太吵。</p>
+          </div>
+          <div class="small-note">现金 / 债券 / 股票</div>
+        </div>
+        <div class="allocation-spread">
+          <div class="allocation-card">
+            <strong>当前比例</strong>
+            <div class="allocation-list" id="allocationList" style="margin-top:16px"></div>
+          </div>
+          <div class="allocation-card">
+            <strong>配置边注</strong>
+            <div class="btn-row" id="allocationPills" style="margin-top:16px"></div>
+          </div>
+        </div>
+        <div class="spread-jump">
+          <a class="turn-link" href="#advisor-mpt" data-next-step="allocation">
+            <span class="page-no">04</span>
+            <span class="copy"><small>next spread</small><span>翻到 MPT 约束</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="advisor-step locked" id="advisor-mpt" data-step-panel="allocation">
+        <div class="spread-header">
+          <div>
+            <div class="eyebrow">step three · continuation</div>
+            <h2 style="margin:16px 0 0">MPT 轻量约束</h2>
+            <p>这不是另一个配置卡，而是配置背后的边界页。</p>
+          </div>
+          <div class="small-note">目标 / 约束 / 上限 / 输出</div>
+        </div>
+        <div class="rule-grid" id="mptList"></div>
+        <div class="spread-jump">
+          <a class="turn-link" href="#advisor-diversify" data-next-step="execute">
+            <span class="page-no">05</span>
+            <span class="copy"><small>next spread</small><span>翻到执行规则</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="advisor-step locked" id="advisor-diversify" data-step-panel="execute">
+        <div class="spread-header">
+          <div>
+            <div class="eyebrow">step four</div>
+            <h2 style="margin:16px 0 0">分散与债券</h2>
+            <p>切换视角，一次只看一组规则，会更像真正的阅读。</p>
+          </div>
+          <div class="sub-switch interactive-wrap">
+            <button class="switch-btn active" type="button" data-diversify-switch="stock">股票分散</button>
+            <button class="switch-btn" type="button" data-diversify-switch="bond">债券节奏</button>
+          </div>
+        </div>
+        <div id="stockRulesWrap"><div class="rule-grid" id="stockRules"></div></div>
+        <div id="bondRulesWrap" class="hide"><div class="rule-grid" id="bondRules"></div></div>
+        <div class="spread-jump">
+          <a class="turn-link" href="#advisor-rebalance" data-next-step="execute">
+            <span class="page-no">06</span>
+            <span class="copy"><small>next spread</small><span>翻到约束与再平衡</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="advisor-step locked" id="advisor-rebalance" data-step-panel="execute">
+        <div class="spread-header">
+          <div>
+            <div class="eyebrow">step four · continuation</div>
+            <h2 style="margin:16px 0 0">约束与再平衡</h2>
+            <p>先看哪些不能碰，再看什么时候调、怎么调。</p>
+          </div>
+          <div class="sub-switch interactive-wrap">
+            <button class="switch-btn active" type="button" data-execution-switch="split">约束</button>
+            <button class="switch-btn" type="button" data-execution-switch="rebalance">再平衡</button>
+          </div>
+        </div>
+        <div id="executionSplit"><div class="rule-grid" id="constraintRules"></div></div>
+        <div id="executionRebalance" class="hide"><div class="rule-grid" id="rebalanceRules"></div></div>
+        <div class="spread-jump">
+          <a class="turn-link active" href="goal.html">
+            <span class="page-no">07</span>
+            <span class="copy"><small>open page</small><span>翻到目标</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>这一页更像一条阅读路径：先边界，再现金，再配置，最后才是执行。</span>
+      <a href="goal.html">去看目标</a>
+    </footer>
+  </div>
+
+  <script src="site-state.js"></script>
+  <script src="advisor-flow.js"></script>
+</body>
+</html>
